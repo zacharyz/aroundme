@@ -115,6 +115,16 @@ nav div.menu-container {
 	background: #aaa;	box-shadow: inset 0 1px 3px 0px rgba(0,0,0,0.3); color: #fff;
 }
 
+div.odd {
+	background: #f3f3f3;
+}
+div.even {
+	background: #fff;
+}
+
+.place {
+	padding: 10px 0px;
+}
 /****************************************
 	==== FOOTER
 ****************************************/
@@ -144,12 +154,7 @@ footer div.social a.icon {
 	width: 16px; height: 16px; float: left; display: block; margin: 0 0 0 5px;
 }
 
-div.odd {
-	background: #f3f3f3;
-}
-div.even {
-	background: #fff;
-}
+
 /****************************************
 	==== REUSABLE CLASSES
 ****************************************/

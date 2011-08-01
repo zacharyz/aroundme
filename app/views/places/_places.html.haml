@@ -1,7 +1,34 @@
+%h2 weather
+.context
+   - if context.length > 0
+      .weather
+         .forecast
+            .today
+               %h3 today   
+               = context[:weather][:forecast][:today][:conditions]            
+               .high 
+                  = context[:weather][:forecast][:today][:temperature][:max]
+               .low    
+                  = context[:weather][:forecast][:today][:temperature][:min]
+            .tonight      
+               %h3 tonight
+               = context[:weather][:forecast][:tonight][:conditions]
+               .high 
+                  = context[:weather][:forecast][:tonight][:temperature][:max]              
+               .low 
+                  = context[:weather][:forecast][:tonight][:temperature][:min] 
+            .tomorrow
+               %h3 tomorrow   
+               = context[:weather][:forecast][:tomorrow][:conditions]
+               .high 
+                  = context[:weather][:forecast][:tomorrow][:temperature][:max]              
+               .low 
+                  = context[:weather][:forecast][:tomorrow][:temperature][:min]        
+%h2 restaurants
 - if places.length > 0
    - places.each do |place|
       .place{ :class=> 'corners5x ' + cycle('odd', 'even')}
-         %h2 
+         %h3 
             = place[:properties][:name]
          .phone 
             = place[:properties][:phone]

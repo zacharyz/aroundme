@@ -1,1 +1,1 @@
-$('#places').append("<%= escape_javascript(raw (render :partial => 'places', :locals => { :places => @places })) %>");
+$('#places').append("<%= escape_javascript(raw (render :partial => 'places', :locals => { :places => @places, :context => @context })) %>");

@@ -5,7 +5,8 @@ class PlacesController < ApplicationController
       logger.debug "got a lat"
       options = {'category' => 'Restaurant'}
       @places = SimpleGeo::Client.get_places(params[:lat], params[:long], options)
-      @places = @places[:features]          
+      @places = @places[:features]              
+      @context = SimpleGeo::Client.get_context(params[:lat], params[:long]) 
     end
     respond_to do |format|
        format.html
