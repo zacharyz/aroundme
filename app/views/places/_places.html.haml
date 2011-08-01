@@ -1,0 +1,9 @@
+- if places.length > 0
+   - places.each do |place|
+      .place{ :class=> 'corners5x ' + cycle('odd', 'even')}
+         %h2 
+            = place[:properties][:name]
+         .phone 
+            = place[:properties][:phone]
+         .address 
+            = place[:properties][:address]

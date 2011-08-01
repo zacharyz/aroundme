@@ -3,7 +3,7 @@ Artwalkrails::Application.routes.draw do
 
   get "pages/contact" 
   
-  root :to => "pages#index"
+  root :to => "places#index"
   resources :places
 
   # The priority is based upon order of creation:
