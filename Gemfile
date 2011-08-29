@@ -42,3 +42,6 @@ gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
 # Rails 3.1 - JavaScript
+
+gem 'therubyracer-heroku', '0.8.1.pre3'
+gem 'pg'
