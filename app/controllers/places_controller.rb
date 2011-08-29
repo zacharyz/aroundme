@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController        
+  respond_to :html, :js
   def index      
     @places = Array.new      
     if params[:lat]
@@ -8,17 +9,7 @@ class PlacesController < ApplicationController
       @places = @places[:features]              
       @context = SimpleGeo::Client.get_context(params[:lat], params[:long]) 
     end
-    respond_to do |format|
-       format.html
-       format.js       
-       format.xml
-    end
   end    
   def show
-     respond_to do |format|
-         format.html
-         format.js       
-         format.xml
-      end
   end
 end
