@@ -43,6 +43,3 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # end
 
 # Rails 3.1 - Heroku
-group :production do
-  gem 'pg'
-end    
