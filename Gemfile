@@ -32,7 +32,8 @@ gem 'jquery-rails'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
-gem 'sqlite3-ruby', :require => 'sqlite3'
+gem "pg", :group => :production
+gem "sqlite3-ruby", :group => :development
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
@@ -41,5 +42,3 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
-
-# Rails 3.1 - Heroku
