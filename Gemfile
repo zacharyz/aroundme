@@ -1,17 +1,23 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc8'
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
-gem "jquery-rails"
-
 gem 'simplegeo'
 
 gem 'haml'
+
+# Asset template engines
+group :assets do    
+  gem 'json'
+  gem 'sass-rails'
+  gem 'coffee-script'
+  gem 'uglifier'
+end
+
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -26,7 +32,7 @@ gem 'haml'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
@@ -35,13 +41,8 @@ gem 'haml'
 # group :development, :test do
 #   gem 'webrat'
 # end
-                 
-# Rails 3.1 - Asset Pipeline
-gem 'json'
-gem 'sass'
-gem 'coffee-script'
-gem 'uglifier'
-# Rails 3.1 - JavaScript
 
-gem 'therubyracer-heroku', '0.8.1.pre3'
-gem 'pg'
+# Rails 3.1 - Heroku
+group :production do
+  gem 'pg'
+end    
